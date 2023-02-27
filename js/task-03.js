@@ -13,4 +13,12 @@ const images = [
   },
 ];
 
-const markup = images.map(technology => `<li class="list-item new">${technology}</li>`).join('');
+const markup = images
+  .map(
+    image =>
+      `<li class="gallery__item"><img src="${image.url}" alt="${image.alt}"></li>`,
+  )
+  .join('');
+
+const galleryListEl = document.querySelector('.gallery');
+galleryListEl.insertAdjacentHTML('afterbegin', markup);
