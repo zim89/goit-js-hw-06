@@ -1,9 +1,6 @@
-const refs = {
-  submit: document.querySelector('button'),
-  form: document.querySelector('.login-form'),
-};
+const form = document.querySelector('.login-form');
 
-refs.form.addEventListener('submit', onFormSubmit);
+form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
